@@ -1,0 +1,32 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "2d485cc776eda1fb1050be7e22fed1d9"
+name = "wishlist-inspire"
+handle = "wishlist-inspire-269"
+application_url = "https://aviation-o-symantec-sticker.trycloudflare.com"
+embedded = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "write_products"
+
+[auth]
+redirect_urls = [
+  "https://aviation-o-symantec-sticker.trycloudflare.com/auth/callback",
+  "https://aviation-o-symantec-sticker.trycloudflare.com/auth/shopify/callback",
+  "https://aviation-o-symantec-sticker.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-10"
+
+  [[webhooks.subscriptions]]
+  topics = [ "app/uninstalled" ]
+  uri = "/webhooks/app/uninstalled"
+
+[pos]
+embedded = false
+
+[build]
+dev_store_url = "quickstart-40d2c10b.myshopify.com"
+automatically_update_urls_on_dev = true
