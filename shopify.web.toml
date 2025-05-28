@@ -5,3 +5,12 @@ webhooks_path = "/webhooks/app/uninstalled"
 [commands]
 predev = "npx prisma generate"
 dev = "npx prisma migrate deploy && npm exec remix vite:dev"
+
+application_url = "https://app-owgw.onrender.com"
+
+
+redirect_urls = [
+    "https://app-owgw.onrender.com/auth/callback",
+    "https://app-owgw.onrender.com/auth/shopify/callback",
+    "https://app-owgw.onrender.com/api/auth/callback"
+]
